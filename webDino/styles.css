@@ -1,0 +1,28 @@
+*{ /* apply styles to all html elements */
+  padding: 0;
+  margin: 0;
+}
+
+
+#game {
+  background-color: lightblue;
+  height: 50vh;
+  position: relative;
+}
+
+#block {
+  background-color: lightgreen;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#char {
+  background-color: lightcoral;
+  width: 60px;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+}
