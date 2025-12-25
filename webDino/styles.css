@@ -8,6 +8,7 @@
   background-color: lightblue;
   height: 50vh;
   position: relative;
+  overflow: hidden;
 }
 
 #block {
@@ -17,6 +18,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  /* applies the "block" animation, speed:2s,infinite=loops,linear=smooth */
+  animation: block 2s infinite linear;
 }
 
 #char {
@@ -25,4 +28,21 @@
   height: 90px;
   position: absolute;
   bottom: 0;
+}
+
+.jump {
+  animation: jump 1s;
+}
+
+@keyframes block {
+  /* animation at 0%=start point(from) */
+  /* animation at 100%=end point(to) */
+  0%{right:0}
+  100%{right: 100%}
+}
+
+@keyframes jump {
+  0%{bottom: 0;}
+  50%{bottom: 100px;}
+  100%{bottom: 0px;}
 }
