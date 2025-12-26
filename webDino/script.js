@@ -1,17 +1,22 @@
 const player = document.getElementById('char')
+const block = document.getElementById('block')
 
 
 document.addEventListener('keydown', (event) => {
   if (event.key === ' ') {
-    player.classList.add('jump')
+    if (player.classList != 'jump') {
+      player.classList.add('jump')
+    }
   }
   setTimeout(() => {
     player.classList.remove('jump')
-  },700)
+  },500)
 })
 
 
-// function charJump(){
-//   return 
-// }
+const checkDead = setInterval(() => {
+  const characterTop = parseInt(window.getComputedStyle(player).getPropertyValue('bottom'))
+  const blockRight = parseInt(window.getComputedStyle(block).getPropertyValue('right'))
 
+  // if (blockRight)
+}, 10)

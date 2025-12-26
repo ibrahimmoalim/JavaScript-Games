@@ -19,7 +19,7 @@
   bottom: 0;
   right: 0;
   /* applies the "block" animation, speed:2s,infinite=loops,linear=smooth */
-  animation: block 2s infinite linear;
+  animation: block 1s infinite linear;
 }
 
 #char {
@@ -28,10 +28,18 @@
   height: 90px;
   position: absolute;
   bottom: 0;
+  left: 10px;
 }
 
 .jump {
-  animation: jump 1s;
+  animation: jump 500ms;
+}
+
+@keyframes jump {
+  0%{bottom: 0;}
+  30%{bottom: 100px;}
+  70%{bottom: 100px;}
+  100%{bottom: 0px;}
 }
 
 @keyframes block {
@@ -39,10 +47,4 @@
   /* animation at 100%=end point(to) */
   0%{right:0}
   100%{right: 100%}
-}
-
-@keyframes jump {
-  0%{bottom: 0;}
-  50%{bottom: 100px;}
-  100%{bottom: 0px;}
 }
